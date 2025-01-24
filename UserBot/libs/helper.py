@@ -21,3 +21,4 @@ def log_command(command_name: str, user: discord.User, message: str, channel: di
     embed.set_footer(text="made by no.1_jj")
 
     webhook.send(embed=embed, username="Command Logger")
+     #Made By no.1_jj
