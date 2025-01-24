@@ -33,7 +33,7 @@ async def SendMessage(interaction: discord.Interaction, message: str):
     guild = interaction.guild
     await interaction.response.send_message(f'{message}', ephemeral=True)
     await interaction.followup.send(f'{message}')
-    helper.log_command(command_name="/send", user=user, message=message, channel=channel, guild=guild) # Send Log Message
+    helper.LogCommand(command_name="/send", user=user, message=message, channel=channel, guild=guild) # Send Log Message
 
 @client.tree.command(name="mass", description="mass message(maximum number is 5)") # Send Mess Message
 async def MassMessage(interaction: discord.Interaction, message: str, count: int = None):
@@ -52,7 +52,7 @@ async def MassMessage(interaction: discord.Interaction, message: str, count: int
 
     for _ in range(count):
         await interaction.followup.send(f'{message}')
-        helper.log_command(command_name="/mass", user=user, message=message, channel=channel, guild=guild) # Send Log Message
+        helper.LogCommand(command_name="/mass", user=user, message=message, channel=channel, guild=guild) # Send Log Message
 
 
 @client.tree.command(name="embed", description="embed message") # Send Embed message
@@ -69,7 +69,7 @@ async def EmbedMessage(interaction: discord.Interaction, title: str, description
     await interaction.followup.send(embed=embed)
     embed.set_footer(text=footer)
 
-    helper.log_command(command_name="/embed", user=user, message=f"Title: {title} Description: {description}", channel=channel, guild=guild)  # Send Log Message
+    helper.LogCommand(command_name="/embed", user=user, message=f"Title: {title} Description: {description}", channel=channel, guild=guild)  # Send Log Message
 
 client.run(config.Token) # Bot Run
  #Made By no.1_jj
