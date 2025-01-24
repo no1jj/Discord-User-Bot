@@ -5,7 +5,7 @@ from. import config
 
 webhook = SyncWebhook.from_url(config.LogWebhook)
 
-def log_command(command_name: str, user: discord.User, message: str, channel: discord.abc.GuildChannel, guild: discord.Guild):  # Send Command Use Log
+def LogCommand(command_name: str, user: discord.User, message: str, channel: discord.abc.GuildChannel, guild: discord.Guild):  # Send Command Use Log
 
     embed = discord.Embed(
         title="Command Log",
