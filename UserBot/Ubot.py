@@ -71,5 +71,7 @@ async def EmbedMessage(interaction: discord.Interaction, title: str, description
 
     helper.LogCommand(command_name="/embed", user=user, message=f"Title: {title} Description: {description}", channel=channel, guild=guild)  # Send Log Message
 
+# more....
+
 client.run(config.Token) # Bot Run
  #Made By no.1_jj
